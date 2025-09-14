@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.css";
 import { Button } from "@/components/ui/button";
 import PDFModal from "@/components/PDFModal";
 import ContactForm from "@/components/ContactForm";
+import ProfessionalDocuments from "@/components/ProfessionalDocuments";
 
 import {
   ChevronRight,
@@ -17,6 +18,7 @@ import {
   MapPin,
   Calendar,
   FileText,
+  Download,
 } from "lucide-react";
 import { TriangleDownIcon } from "@radix-ui/react-icons";
 import Spline from "@splinetool/react-spline";
@@ -419,6 +421,71 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Resume Section */}
+        <section id="resume" data-scroll-section className="my-32">
+          <div className="max-w-6xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
+                📄 Resume & CV
+              </span>
+              <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+                Professional Experience
+              </h2>
+              <p className="mt-6 text-lg text-muted-foreground max-w-3xl mx-auto">
+                Download my complete resume to learn more about my academic achievements, professional experience, and technical skills.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex justify-center"
+            >
+              <div className="rounded-xl bg-gradient-to-br from-white/5 to-white/10 p-[1px] backdrop-blur-xl shadow-xl">
+                <div className="rounded-xl bg-background/95 backdrop-blur-sm p-8 max-w-2xl">
+                  <div className="text-center">
+                    <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 flex items-center justify-center">
+                      <FileText className="h-10 w-10 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-semibold text-gradient clash-grotesk mb-4">
+                      Swapnil Mittal - Resume
+                    </h3>
+                    <p className="text-muted-foreground mb-6">
+                      Computer Science + Machine Learning student at Georgia Tech with experience in AI, backend systems, and full-stack development.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Button
+                        onClick={() => setIsPDFModalOpen(true)}
+                        size="lg"
+                        className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70"
+                      >
+                        <FileText className="mr-2 h-5 w-5" />
+                        View Resume
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        onClick={() => window.open('/assets/resume.pdf', '_blank')}
+                      >
+                        <Download className="mr-2 h-5 w-5" />
+                        Download PDF
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Projects */}
         <section id="projects" data-scroll-section>
           {/* Gradient */}
@@ -462,6 +529,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Professional Documents */}
+        <ProfessionalDocuments />
 
         {/* Services */}
         <section id="services" data-scroll-section>
