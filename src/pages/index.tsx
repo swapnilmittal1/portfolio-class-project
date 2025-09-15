@@ -21,7 +21,7 @@ import {
   Download,
 } from "lucide-react";
 import { TriangleDownIcon } from "@radix-ui/react-icons";
-import RobustSpline from "@/components/RobustSpline";
+import SimpleSpline from "@/components/SimpleSpline";
 import Link from "next/link";
 import { cn, scrollTo } from "@/lib/utils";
 import Image from "next/image";
@@ -191,11 +191,14 @@ export default function Home() {
   useEffect(() => {
     // Preload Spline file for better reliability
     if (typeof window !== 'undefined') {
+      console.log('Preloading Spline file...');
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = '/assets/robot_follow_cursor_for_landing_page.spline';
       link.as = 'fetch';
       link.crossOrigin = 'anonymous';
+      link.onload = () => console.log('Spline file preloaded successfully');
+      link.onerror = () => console.error('Failed to preload Spline file');
       document.head.appendChild(link);
     }
 
@@ -349,10 +352,13 @@ export default function Home() {
             id={styles["canvas-container"]}
             className="mt-full h-96 w-96 xl:mt-0"
           >
-            <RobustSpline 
-              scene="/assets/robot_follow_cursor_for_landing_page.spline"
-              className="h-96 w-96"
-            />
+            <div className="flex items-center justify-center h-96 w-96 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg">
+              <div className="text-center">
+                <div className="text-8xl mb-4 animate-bounce">🤖</div>
+                <p className="text-lg font-semibold text-foreground mb-2">Interactive 3D Robot</p>
+                <p className="text-sm text-muted-foreground">Hover to interact</p>
+              </div>
+            </div>
           </div>
 </section>
 
