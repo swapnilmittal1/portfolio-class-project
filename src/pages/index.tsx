@@ -21,7 +21,7 @@ import {
   Download,
 } from "lucide-react";
 import { TriangleDownIcon } from "@radix-ui/react-icons";
-import Spline from "@splinetool/react-spline";
+import RobustSpline from "@/components/RobustSpline";
 import Link from "next/link";
 import { cn, scrollTo } from "@/lib/utils";
 import Image from "next/image";
@@ -189,6 +189,16 @@ export default function Home() {
 
   // handle scroll
   useEffect(() => {
+    // Preload Spline file for better reliability
+    if (typeof window !== 'undefined') {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = '/assets/robot_follow_cursor_for_landing_page.spline';
+      link.as = 'fetch';
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    }
+
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
 
@@ -334,15 +344,16 @@ export default function Home() {
             </div>
           </div>
           <div
-  data-scroll
-  data-scroll-speed="-.01"
-  id={styles["canvas-container"]}
-  className="mt-full h-96 w-96 xl:mt-0"
->
-  <Suspense fallback={<span>Loading...</span>}>
-    <Spline scene="/assets/robot_follow_cursor_for_landing_page.spline" />
-  </Suspense>
-</div>
+            data-scroll
+            data-scroll-speed="-.01"
+            id={styles["canvas-container"]}
+            className="mt-full h-96 w-96 xl:mt-0"
+          >
+            <RobustSpline 
+              scene="/assets/robot_follow_cursor_for_landing_page.spline"
+              className="h-96 w-96"
+            />
+          </div>
 </section>
 
         {/* About */}
