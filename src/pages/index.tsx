@@ -285,7 +285,7 @@ export default function Home() {
         <section
           id="home"
           data-scroll-section
-          className="mt-40 flex w-full flex-col items-center xl:mt-0 xl:min-h-screen xl:flex-row xl:justify-between"
+          className="mt-20 flex w-full flex-col items-center xl:mt-0 xl:min-h-screen xl:flex-row xl:justify-between"
         >
           <div className={styles.intro}>
             <div
@@ -355,7 +355,7 @@ export default function Home() {
             data-scroll
             data-scroll-speed="-.01"
             id={styles["canvas-container"]}
-            className="mt-10 xl:mt-0 flex items-center justify-center"
+            className="mt-10 xl:mt-0 flex items-end justify-end"
           >
             <SimpleSpline
               scene="/assets/robot_follow_cursor_for_landing_page.spline"

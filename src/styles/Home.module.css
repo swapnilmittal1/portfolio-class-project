@@ -1,6 +1,6 @@
 /* hero */
 .intro {
-    @apply flex flex-col items-start space-y-4 w-full xl:w-3/4; /* Adjusted width for larger screens */
+    @apply flex flex-col items-start space-y-4 w-full xl:w-[38%]; /* Give more space to animation on large screens */
 }
 .pill {
     @apply transition border border-input bg-background flex items-center text-xs px-2.5 py-1.5 rounded-full hover:-translate-y-1 hover:bg-primary hover:text-primary-foreground duration-300;
@@ -24,5 +24,5 @@
 
 /* spline canvas */
 #canvas-container {
-    @apply h-96 w-96 xl:h-[520px] xl:w-[520px] overflow-hidden;
+    @apply relative w-full h-[420px] xl:h-[80vh] xl:w-[62vw] overflow-hidden;
 }
