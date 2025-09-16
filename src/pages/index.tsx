@@ -21,7 +21,7 @@ import {
   Download,
 } from "lucide-react";
 import { TriangleDownIcon } from "@radix-ui/react-icons";
-import SimpleSpline from "@/components/SimpleSpline";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { cn, scrollTo } from "@/lib/utils";
 import Image from "next/image";
@@ -37,6 +37,11 @@ import {
 } from "@/components/ui/carousel";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
+
+// Load Spline client-side to avoid SSR issues
+const SimpleSpline = dynamic(() => import("@/components/SimpleSpline"), {
+  ssr: false,
+});
 
 const projects = [
   {
@@ -352,13 +357,10 @@ export default function Home() {
             id={styles["canvas-container"]}
             className="mt-full h-96 w-96 xl:mt-0"
           >
-            <div className="flex items-center justify-center h-96 w-96 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg">
-              <div className="text-center">
-                <div className="text-8xl mb-4 animate-bounce">🤖</div>
-                <p className="text-lg font-semibold text-foreground mb-2">Interactive 3D Robot</p>
-                <p className="text-sm text-muted-foreground">Hover to interact</p>
-              </div>
-            </div>
+            <SimpleSpline
+              scene="/assets/robot_follow_cursor_for_landing_page.spline"
+              className="h-96 w-96 rounded-lg overflow-hidden"
+            />
           </div>
 </section>
 
