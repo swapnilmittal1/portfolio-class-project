@@ -355,11 +355,11 @@ export default function Home() {
             data-scroll
             data-scroll-speed="-.01"
             id={styles["canvas-container"]}
-            className="mt-full h-96 w-96 xl:mt-0"
+            className="mt-10 xl:mt-0 flex items-center justify-center"
           >
             <SimpleSpline
               scene="/assets/robot_follow_cursor_for_landing_page.spline"
-              className="h-96 w-96 rounded-lg overflow-hidden"
+              className="h-full w-full rounded-lg"
             />
           </div>
 </section>

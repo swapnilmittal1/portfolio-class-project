@@ -24,6 +24,5 @@
 
 /* spline canvas */
 #canvas-container {
-    @apply bg-black h-[1105px] xl:w-[1690px] xl:min-w-[1690px] overflow-hidden;
-    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+    @apply h-96 w-96 xl:h-[520px] xl:w-[520px] overflow-hidden;
 }
