@@ -333,7 +333,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Link href="mailto:swapnil.mittal1@gmail.com">
+              <Link href="#contact">
                 <Button>
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
@@ -651,7 +651,7 @@ export default function Home() {
                 <Link href="mailto:swapnil.mittal1@gmail.com">
                   <Button size="lg" className="w-full sm:w-auto px-8 py-3 text-lg">
                     <Mail className="mr-2 h-5 w-5" />
-                    Get in touch
+                    Send Email
                   </Button>
                 </Link>
                 <Link href="https://www.linkedin.com/in/mittalswapnil/">
