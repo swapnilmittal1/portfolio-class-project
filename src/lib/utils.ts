@@ -11,10 +11,19 @@ export function scrollTo(element: Element | null) {
 
   // Check if Locomotive Scroll is available
   if (typeof window !== 'undefined' && (window as any).locomotiveScroll) {
-    (window as any).locomotiveScroll.scrollTo(element, {
-      duration: 1000,
-      easing: [0.25, 0.0, 0.35, 1.0],
-    });
+    try {
+      (window as any).locomotiveScroll.scrollTo(element, {
+        duration: 1000,
+        easing: [0.25, 0.0, 0.35, 1.0],
+      });
+    } catch (error) {
+      console.warn('Locomotive scroll failed, falling back to native scroll:', error);
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
   } else {
     element.scrollIntoView({
       behavior: "smooth",

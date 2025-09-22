@@ -53,7 +53,9 @@ function handleClick(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
   if (href && href.startsWith("#")) {
     e.preventDefault();
     const section = document.querySelector(href);
-    scrollTo(section);
+    if (section) {
+      scrollTo(section);
+    }
   }
 }
 
