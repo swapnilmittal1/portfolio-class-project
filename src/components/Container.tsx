@@ -54,7 +54,10 @@ function handleClick(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     e.preventDefault();
     const section = document.querySelector(href);
     if (section) {
-      scrollTo(section);
+      // Simple approach - just scroll to the element with a fixed offset
+      const yOffset = -80;
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   }
 }
@@ -233,7 +236,10 @@ export default function Container(props: ContainerProps) {
                         e.preventDefault();
                         const section = document.querySelector(link.href);
                         if (section) {
-                          scrollTo(section);
+                          // Simple approach for mobile too
+                          const yOffset = -80;
+                          const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                          window.scrollTo({ top: y, behavior: 'smooth' });
                         }
                         setIsOpen(false);
                       }}
