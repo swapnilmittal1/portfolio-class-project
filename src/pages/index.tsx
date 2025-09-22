@@ -362,12 +362,17 @@ export default function Home() {
             data-scroll
             data-scroll-speed="-.01"
             id={styles["canvas-container"]}
-            className="mt-full h-96 w-96 xl:mt-0"
+            className="mt-full h-96 w-96 xl:mt-0 flex items-center justify-center"
           >
-            <SimpleSpline
-              scene="/assets/robot_follow_cursor_for_landing_page.spline"
-              className="h-full w-full"
-            />
+            <div className="relative w-80 h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-2xl">
+              <Image
+                src="/assets/memoji.jpg"
+                alt="Swapnil Mittal"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-secondary/10" />
+            </div>
           </div>
 </section>
 
