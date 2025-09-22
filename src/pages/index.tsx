@@ -387,10 +387,18 @@ export default function Home() {
             <div className="py-16 pb-2 space-y-8">
               {/* Intro Statement */}
               <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl">👋</span>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <span className="text-2xl">👋</span>
+                    <p className="text-lg font-light leading-relaxed tracking-tight text-foreground xl:text-xl">
+                      I&apos;m Swapnil, a CS + ML student at Georgia Tech passionate about turning cutting-edge research into production-scale systems that make a real impact.
+                    </p>
+                  </div>
                   <p className="text-lg font-light leading-relaxed tracking-tight text-foreground xl:text-xl">
-                    I&apos;m Swapnil — a CS + ML student at Georgia Tech, building AI-driven systems that deliver real-world impact.
+                    My work spans everything from deploying cloud-native ML services and building legal AI assistants, to scaling data pipelines that process terabytes daily. But beyond the code, I care deeply about clarity, collaboration, and creating tools that actually serve people—whether that&apos;s mentoring 200+ students as a TA, reducing attorney wait times with smarter NLP, or optimizing LLM token usage to save compute (and money).
+                  </p>
+                  <p className="text-lg font-light leading-relaxed tracking-tight text-foreground xl:text-xl">
+                    I&apos;m especially excited by problems that live at the intersection of AI, systems, and human feedback—and I enjoy building things that are both technically elegant and practically useful. Outside of work, I love cats, good coffee, and exploring the balance between quiet focus and big ideas. If it&apos;s fast, scalable, and helps people get things done, I want to help build it.
                   </p>
                 </div>
               </div>
