@@ -9,9 +9,9 @@ export function cn(...inputs: ClassValue[]) {
 export function scrollTo(element: Element | null) {
   if (!element) return;
 
-  // Get actual navbar height dynamically with proper buffer
+  // Get actual navbar height dynamically with fine-tuned buffer
   const navbar = document.querySelector('.nav');
-  const navbarHeight = navbar ? navbar.getBoundingClientRect().height + 15 : 95; // 15px buffer
+  const navbarHeight = navbar ? navbar.getBoundingClientRect().height + 10 : 90; // 10px buffer
   
   const elementPosition = element.getBoundingClientRect().top;
   const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
