@@ -48,18 +48,8 @@ const navLinks = [
 ];
 
 function handleClick(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
-  const href = e.currentTarget.getAttribute("href");
-
-  if (href && href.startsWith("#")) {
-    e.preventDefault();
-    const section = document.querySelector(href);
-    if (section) {
-      // Simple approach - just scroll to the element with a fixed offset
-      const yOffset = -80;
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  }
+  // Let the browser handle the scroll naturally with CSS scroll-padding-top
+  // No preventDefault needed - let it work like normal anchor links
 }
 
 function NavItem(props: NavProps) {
@@ -230,23 +220,14 @@ export default function Container(props: ContainerProps) {
                 {/* Links */}
                 <ul className="flex min-h-fit w-full flex-col items-start space-y-6 px-[22px] py-[58px]">
                   {navLinks.map((link, i) => (
-                    <button 
+                    <a 
                       key={link.href} 
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const section = document.querySelector(link.href);
-                        if (section) {
-                          // Simple approach for mobile too
-                          const yOffset = -80;
-                          const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                          window.scrollTo({ top: y, behavior: 'smooth' });
-                        }
-                        setIsOpen(false);
-                      }}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
                       className="text-xl nav-link"
                     >
                       {link.text}
-                    </button>
+                    </a>
                   ))}
                 </ul>
 
