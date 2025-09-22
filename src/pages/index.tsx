@@ -453,7 +453,7 @@ export default function Home() {
         </section>
 
         {/* Resume Section */}
-        <section id="resume" data-scroll-section className="my-32">
+        <section id="resume" data-scroll-section className="mt-48 mb-32">
           <div className="max-w-6xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -518,7 +518,7 @@ export default function Home() {
         </section>
 
         {/* Projects */}
-        <section id="projects" data-scroll-section>
+        <section id="projects" data-scroll-section className="mt-48">
           {/* Gradient */}
           <div className="relative isolate -z-10">
             <div
@@ -562,10 +562,12 @@ export default function Home() {
         </section>
 
         {/* Professional Documents */}
-        <ProfessionalDocuments />
+        <div className="mt-48">
+          <ProfessionalDocuments />
+        </div>
 
         {/* Services */}
-        <section id="services" data-scroll-section>
+        <section id="services" data-scroll-section className="mt-48">
           <div
             data-scroll
             data-scroll-speed=".4"
