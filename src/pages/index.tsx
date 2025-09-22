@@ -386,75 +386,21 @@ export default function Home() {
           >
             <div className="py-16 pb-2 space-y-8">
               {/* Intro Statement */}
-              <div className="space-y-4">
-                <div className="space-y-4">
+              <div className="space-y-6">
+                <div className="space-y-6">
                   <div className="flex items-center space-x-3">
-                    <span className="text-2xl">👋</span>
-                    <p className="text-lg font-light leading-relaxed tracking-tight text-foreground xl:text-xl">
+                    <span className="text-3xl">👋</span>
+                    <p className="text-xl font-light leading-relaxed tracking-tight text-foreground xl:text-2xl">
                       I&apos;m Swapnil, a CS + ML student at Georgia Tech passionate about turning cutting-edge research into production-scale systems that make a real impact.
                     </p>
                   </div>
-                  <p className="text-lg font-light leading-relaxed tracking-tight text-foreground xl:text-xl">
+                  <p className="text-xl font-light leading-relaxed tracking-tight text-foreground xl:text-2xl">
                     My work spans everything from deploying cloud-native ML services and building legal AI assistants, to scaling data pipelines that process terabytes daily. But beyond the code, I care deeply about clarity, collaboration, and creating tools that actually serve people—whether that&apos;s mentoring 200+ students as a TA, reducing attorney wait times with smarter NLP, or optimizing LLM token usage to save compute (and money).
                   </p>
-                  <p className="text-lg font-light leading-relaxed tracking-tight text-foreground xl:text-xl">
+                  <p className="text-xl font-light leading-relaxed tracking-tight text-foreground xl:text-2xl">
                     I&apos;m especially excited by problems that live at the intersection of AI, systems, and human feedback—and I enjoy building things that are both technically elegant and practically useful. Outside of work, I love cats, good coffee, and exploring the balance between quiet focus and big ideas. If it&apos;s fast, scalable, and helps people get things done, I want to help build it.
                   </p>
                 </div>
-              </div>
-
-              {/* Divider */}
-              <div className="border-t border-border/20 my-8"></div>
-
-              {/* First Section */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl">🧠</span>
-                  <h2 className="text-3xl font-bold tracking-tighter text-foreground xl:text-[40px]">
-                    AI that works. Systems that scale.
-                  </h2>
-                </div>
-                <ul className="text-lg font-light leading-relaxed tracking-tight text-foreground xl:text-xl space-y-2 ml-6">
-                  <li>• ⚡ Cut query times by 40%</li>
-                  <li>• 🌐 Scaled microservices to 500+ RPS at 99.999% uptime</li>
-                  <li>• 🎯 Boosted model accuracy from 65% → 95%+</li>
-                </ul>
-              </div>
-
-              {/* Divider */}
-              <div className="border-t border-border/20 my-8"></div>
-
-              {/* Second Section */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl">⚙️</span>
-                  <h2 className="text-3xl font-bold tracking-tighter text-foreground xl:text-[40px]">
-                    From research to production.
-                  </h2>
-                </div>
-                <ul className="text-lg font-light leading-relaxed tracking-tight text-foreground xl:text-xl space-y-2 ml-6">
-                  <li>• Fine-tuned transformers & built RAG pipelines</li>
-                  <li>• Deployed cloud-native ML on AWS/Azure with Docker + Kubernetes</li>
-                  <li>• Constructed 2TB/day ETL pipelines & shipped human-in-the-loop annotation tools</li>
-                </ul>
-              </div>
-
-              {/* Divider */}
-              <div className="border-t border-border/20 my-8"></div>
-
-              {/* Third Section */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl">🚀</span>
-                  <h2 className="text-3xl font-bold tracking-tighter text-foreground xl:text-[40px]">
-                    Impact through engineering and collaboration.
-            </h2>
-                </div>
-                <ul className="text-lg font-light leading-relaxed tracking-tight text-foreground xl:text-xl space-y-2 ml-6">
-                  <li>• Mentored 200+ students as a TA, driving 95% on-time project delivery</li>
-                  <li>• Built hackathon-winning tools that slashed LLM token usage by 47%</li>
-                  <li>• Applied AI across robotics, legal tech, and large-scale enterprise systems</li>
-                </ul>
               </div>
             </div>
           </div>
