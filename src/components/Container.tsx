@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
 import Preloader from "@/components/Preloader";
+import ThemeToggle from "@/components/ThemeToggle";
 import styles from "@/styles/Container.module.css";
 
 type IconProps = {
@@ -181,17 +182,20 @@ export default function Container(props: ContainerProps) {
         </Link>
 
         {/* Desktop menu */}
-        <ul className={styles["desktop-nav"]}>
-          {navLinks.map((link, i) => (
-            <NavItem
-              key={link.href}
-              href={link.href}
-              text={link.text}
-              i={i}
-              className="text-base"
-            />
-          ))}
-        </ul>
+        <div className="flex items-center space-x-4">
+          <ul className={styles["desktop-nav"]}>
+            {navLinks.map((link, i) => (
+              <NavItem
+                key={link.href}
+                href={link.href}
+                text={link.text}
+                i={i}
+                className="text-base"
+              />
+            ))}
+          </ul>
+          <ThemeToggle />
+        </div>
 
         {/* Mobile menu */}
         <AnimatePresence key="menu">
@@ -229,6 +233,9 @@ export default function Container(props: ContainerProps) {
                       {link.text}
                     </a>
                   ))}
+                  <li className="px-[22px]">
+                    <ThemeToggle />
+                  </li>
                 </ul>
 
                 {/* Footer */}
