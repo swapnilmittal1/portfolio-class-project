@@ -48,7 +48,7 @@ const projects = [
     title: "Reverse-Proxy API Debugger",
     tagline: "Envoy-WASM sidecar for debugging APIs at scale",
     description:
-      "AI-powered root-cause insights with a React/Grafana dashboard for high-signal API debugging.",
+      "Built a production-ready debugging system using C++20 and Envoy-WASM to capture API traffic at scale. Designed ClickHouse schema for efficient querying and created React/Grafana dashboards for real-time monitoring. Implemented ML-based anomaly detection for automated root cause analysis.",
     image: "/assets/reverse-proxy-debugger.png",
     href: "https://github.com/swapnilmittal1/reverese_proxy_api_debugger",
     badges: ["C++20", "Envoy", "ClickHouse", "React", "Postgres"],
@@ -63,7 +63,7 @@ const projects = [
     title: "AI Social Commerce Platform",
     tagline: "End-to-end AI-driven platform integrating Meta APIs",
     description:
-      "Unified GraphQL gateway for Messenger, Shops, and Meta Graph with real-time streaming analytics.",
+      "Architected a unified GraphQL gateway connecting Messenger, Shops, and Meta Graph APIs. Fine-tuned LLaMA models with LangChain for conversational AI and built real-time streaming pipelines using Kafka, Flink, and Druid. Deployed microservices on AWS Fargate with container orchestration.",
     image: "/assets/ai-social-commerce.png",
     href: "https://github.com/swapnilmittal1/META-AI-Social-Commerce-Platform",
     badges: ["Python", "Go", "GraphQL", "PyTorch", "Pinecone", "AWS Fargate"],
@@ -78,7 +78,7 @@ const projects = [
     title: "Prompt+ (HackGT Winner 🏆)",
     tagline: "Real-time prompt optimization for LLMs",
     description:
-      "Collaborative prompt editor with dynamic analysis and token savings.",
+      "Led a 4-person team to build a collaborative prompt editor with real-time optimization. Implemented LangChain-based analysis engine and Socket.IO for live collaboration. Created dynamic UI components with React and Tailwind for intuitive user experience.",
     image: "/assets/prompt-plus.png",
     href: "https://github.com/promptplusGT/promptplus",
     badges: ["React", "Tailwind", "Socket.IO", "LangChain"],
@@ -92,7 +92,7 @@ const projects = [
   {
     title: 'Thread-Safe Cache Library',
     tagline: 'High-performance thread-safe caching',
-    description: 'A robust, thread-safe cache library designed for high-concurrency applications with configurable eviction policies and memory management.',
+    description: 'Designed and implemented a lock-free cache library using C++ atomic primitives and memory management techniques. Created configurable LRU/LFU eviction policies and benchmarked performance against standard containers. Applied concurrent programming principles for high-throughput applications.',
     image: '/assets/cache-project.png',
     href: 'https://github.com/swapnilmittal1/cache',
     badges: ['C++', 'Threading', 'Memory Management'],
@@ -106,7 +106,7 @@ const projects = [
   {
     title: 'LiDAR Locomotive',
     tagline: 'ROS-based robotics simulation framework',
-    description: 'Advanced robotics simulation framework using ROS for autonomous vehicle navigation with LiDAR sensor integration and real-time path planning.',
+    description: 'Developed autonomous navigation system using ROS, Gazebo, and LiDAR sensors. Implemented SLAM algorithms for real-time mapping and path planning. Created simulation environment for testing and validation of robotic systems with high accuracy requirements.',
     image: '/assets/lidar-locomotive.png',
     href: 'https://lab-idar.gatech.edu/vip/',
     badges: ['ROS', 'Python', 'LiDAR', 'Gazebo'],
@@ -120,7 +120,7 @@ const projects = [
   {
     title: 'Transformer for RUL prediction',
     tagline: 'PyTorch-based predictive maintenance',
-    description: 'Custom Transformer architecture for Remaining Useful Life (RUL) prediction in industrial machinery using time-series sensor data.',
+    description: 'Researched and implemented custom Transformer architecture for time-series prediction. Applied attention mechanisms to industrial sensor data for predictive maintenance. Optimized model for real-time inference and compared performance against traditional LSTM approaches.',
     image: '/assets/transformer-rul.png',
     href: 'https://github.com/swapnilmittal1/transformer_RUL_prediction',
     badges: ['PyTorch', 'Transformers', 'Time Series', 'ML'],

@@ -145,25 +145,33 @@ export default function ProjectCarousel({ projects, className }: Props) {
                             )}
                           </div>
                           
-                          <p className="text-foreground leading-relaxed text-sm line-clamp-2">{project.description}</p>
+                          <p className="text-foreground leading-relaxed text-sm line-clamp-4">{project.description}</p>
 
-                          {project.highlights && project.highlights.length > 0 && (
-                            <ul className="space-y-1 text-xs text-muted-foreground">
-                              {project.highlights.slice(0, 2).map((h) => (
-                                <li key={h} className="leading-relaxed">• {h}</li>
-                              ))}
-                            </ul>
-                          )}
+                          <div className="space-y-3">
+                            {project.highlights && project.highlights.length > 0 && (
+                              <div>
+                                <h4 className="text-xs font-semibold text-foreground mb-2 uppercase tracking-wider">Key Achievements</h4>
+                                <ul className="space-y-1 text-xs text-muted-foreground">
+                                  {project.highlights.slice(0, 3).map((h) => (
+                                    <li key={h} className="leading-relaxed">• {h}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
 
-                          {project.badges && project.badges.length > 0 && (
-                            <div className="flex flex-wrap gap-1">
-                              {project.badges.slice(0, 3).map((b) => (
-                                <span key={b} className="rounded-md bg-muted px-2 py-1 text-xs text-muted-foreground">
-                                  {b}
-                                </span>
-                              ))}
-                            </div>
-                          )}
+                            {project.badges && project.badges.length > 0 && (
+                              <div>
+                                <h4 className="text-xs font-semibold text-foreground mb-2 uppercase tracking-wider">Technologies Used</h4>
+                                <div className="flex flex-wrap gap-1">
+                                  {project.badges.slice(0, 4).map((b) => (
+                                    <span key={b} className="rounded-md bg-primary/10 text-primary px-2 py-1 text-xs font-medium">
+                                      {b}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+                          </div>
                         </div>
 
                         <div className="mt-4">
