@@ -43,6 +43,11 @@ const SimpleSpline = dynamic(() => import("@/components/SimpleSpline"), {
   ssr: false,
 });
 
+// Load Interactive Avatar
+const InteractiveAvatar = dynamic(() => import("@/components/InteractiveAvatar"), {
+  ssr: false,
+});
+
 const projects = [
   {
     title: "Reverse-Proxy API Debugger",
@@ -364,10 +369,7 @@ export default function Home() {
             id={styles["canvas-container"]}
             className="mt-full h-96 w-96 xl:mt-0"
           >
-            <SimpleSpline
-              scene="/assets/robot_follow_cursor_for_landing_page.spline"
-              className="h-full w-full"
-            />
+            <InteractiveAvatar className="h-full w-full" />
           </div>
 </section>
 
