@@ -9,10 +9,13 @@ export function cn(...inputs: ClassValue[]) {
 export function scrollTo(element: Element | null) {
   if (!element) return;
 
-  // Use native smooth scrolling for better reliability
-  element.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-    inline: "nearest",
+  // Get navbar height to offset scroll position
+  const navbarHeight = 80; // Approximate navbar height
+  const elementPosition = element.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
   });
 }
