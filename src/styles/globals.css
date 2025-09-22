@@ -5,6 +5,11 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Account for fixed navbar */
+  }
+  
   :root {
     --background: 0 0% 0%; /* Changed to black */
     --foreground: 210 40% 98%;
