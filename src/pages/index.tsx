@@ -333,11 +333,11 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Link href="mailto:swapnil.mittal1@gmail.com" passHref>
-                <Button>
+              <Button asChild>
+                <Link href="mailto:swapnil.mittal1@gmail.com">
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
-                </Button>
-              </Link>
+                </Link>
+              </Button>
               
               <Button
                 variant="outline"
@@ -648,18 +648,18 @@ export default function Home() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                <Link href="mailto:swapnil.mittal1@gmail.com" passHref>
-                  <Button size="lg" className="w-full sm:w-auto px-8 py-3 text-lg">
+                <Button asChild size="lg" className="w-full sm:w-auto px-8 py-3 text-lg">
+                  <Link href="mailto:swapnil.mittal1@gmail.com">
                     <Mail className="mr-2 h-5 w-5" />
                     Get in touch
-                  </Button>
-                </Link>
-                <Link href="https://www.linkedin.com/in/mittalswapnil/" passHref>
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto px-8 py-3 text-lg">
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto px-8 py-3 text-lg">
+                  <Link href="https://www.linkedin.com/in/mittalswapnil/">
                     <Linkedin className="mr-2 h-5 w-5" />
                     Connect on LinkedIn
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
